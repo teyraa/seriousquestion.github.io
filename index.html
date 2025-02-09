@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Do You Still Love Me?</title>
+  <style>
+    body {
+      background-color: #ACE1AF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      text-align: center;
+    }
+    .buttons {
+      margin-top: 20px;
+    }
+    .no-button {
+      position: relative;
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 5px;
+      background-color: red;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .yes-button {
+      padding: 10px 20px;
+      background-color: green;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .message {
+      display: none;
+      margin-top: 20px;
+    }
+    .gif-container {
+      display: inline-block;
+      margin-top: 20px;
+    }
+    .no-button:hover {
+      position: absolute;
+      top: -100px;
+      left: -100px;
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Do you still love me?</h1>
+    
+    <!-- Initial Vergonha Beijos GIF -->
+    <div class="gif-container" id="shy-gif">
+      <div class="tenor-gif-embed" data-postid="11439602606540722756" data-share-method="host" data-aspect-ratio="1" data-width="300px">
+        <a href="https://tenor.com/view/vergonha-beijos-coelho-kisses-shy-gif-11439602606540722756">Vergonha Beijos Sticker</a> from <a href="https://tenor.com/search/vergonha-stickers">Vergonha Stickers</a>
+      </div>
+      <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    </div>
+    
+    <!-- Buttons -->
+    <div class="buttons">
+      <button class="yes-button" onclick="showMessage('yes')">Yes</button>
+      <button class="no-button" onmouseover="moveNoButton()" onclick="showMessage('no')">No</button>
+    </div>
+    
+    <!-- Message and Love GIF -->
+    <div class="message" id="message">
+      <p>aaaaaaaaa i love you too <3</p>
+      <div class="gif-container">
+        <div class="tenor-gif-embed" data-postid="7401470219191908100" data-share-method="host" data-aspect-ratio="1" data-width="300px">
+          <a href="https://tenor.com/view/cat-jumping-jump-excited-yippee-gif-7401470219191908100">Cat Jumping Jump Excited Yippee Sticker</a> from <a href="https://tenor.com/search/cat+jumping+jump+excited+yippee-stickers">Cat Jumping Jump Excited Yippee Stickers</a>
+        </div>
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showMessage(answer) {
+      if (answer === 'yes') {
+        document.getElementById('message').style.display = 'block';
+      }
+    }
+
+    function moveNoButton() {
+      const noButton = document.querySelector('.no-button');
+      noButton.style.position = 'absolute';
+      noButton.style.top = `${Math.random() * 80 + 10}%`;
+      noButton.style.left = `${Math.random() * 80 + 10}%`;
+    }
+  </script>
+</body>
+</html>
